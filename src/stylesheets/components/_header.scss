@@ -1,0 +1,101 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+}
+
+nav.navbar {
+  width: 100%;
+  position: relative;
+  height: 45px;
+  display: flex;
+  color: $base_color;
+  background-color: #f8f8f8;
+  border-bottom: $border;
+  justify-content: space-between;
+    align-items: stretch;
+
+
+  .logo {
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0;
+        min-width: 86px;
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url(/assets/images/ui-header.png);
+      background-repeat: no-repeat;
+      background-position: -10px -10px;
+      background-size: auto 141px;
+      height: 22px;
+      width: 100px;
+    }
+  }
+
+  .rightMenu {
+    display: flex;
+    vertical-align: top;
+    justify-content: space-around;
+    height: 100%;
+    float: right;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    margin-right: 10px;
+
+    .item {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 40px;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+      font-size: 16px;
+      width: 38px;
+      height: 100%;
+      background-image: url(/assets/images/ui-header.png);
+      background-repeat: no-repeat;
+      background-size: 199px;
+
+
+      &.user {
+        background-position: -46px -80px;
+      }
+
+      &.search {
+        background-position: -159px -48px;
+      }
+
+      &.menu {
+        background-position: -87px -94px;
+      }
+
+      &.app {
+        background:none !important;
+        color: #8c8c8c;
+        font-weight: 700;
+        position: relative;
+        padding-left: 12px;
+        border-left: 1px solid #B2B2B2;
+        width: auto;
+
+        &::after {
+          position: absolute;
+          display: block;
+          right: -4px;
+          top: 8px;
+          height: 4px;
+          width: 4px;
+          content: '';
+          background: #ff4545;
+          border-radius: 10px
+        }
+      }
+    }
+  }
+}
